@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    redirect_to params[:url]
+    redirect_to URI::decode(params[:url])
   end
 end
